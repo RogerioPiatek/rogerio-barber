@@ -1,36 +1,54 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Rogerio Barber 💈
 
-## Getting Started
+Rogerio Barber is a web app that allows users to book services of barbershops. Users can browse different barbershops, see their ratings, prices, and availability, and make an appointment with a few clicks, in a beautiful UI designed to have the best UX possible.
 
-First, run the development server:
+Feel free to see it live below:
+### [🔗 Rogerio Barber 💈](https://rogerio-barber.vercel.app/)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Tech Stack 🚀
+
+This project is built with the following technologies:
+
+- [Next.js](https://nextjs.org/): A React framework for building fast and scalable web apps with server-side rendering, static site generation, and API routes.
+- [Prisma](https://www.prisma.io/): A next-generation ORM for Node.js and TypeScript that simplifies database access and management.
+- [Tailwind CSS](https://tailwindcss.com/): A utility-first CSS framework that provides a set of customizable classes for styling elements.
+- [Supabase](https://supabase.com/): A platform that provides authentication, cloud storage, hosting, and other services for web and mobile apps.
+- [NextAuth](https://next-auth.js.org/): A library that provides authentication for Next.js apps using various providers and strategies.
+- [Bun](https://bun.sh): A runtime, package manager and much more, used in this case to get faster packages installation than NPM.
+
+## Features ✨
+
+Some of the features of this app are:
+
+- User authentication with NextAuth using Google as a social login option.
+- Barbershop listing and filtering with Prisma and Next.js API routes.
+- Barbershop details with Prisma and Next.js API routes.
+- Booking system with Prisma and Next.js API routes.
+
+## How to run 🏃‍♂️
+
+To run this project locally, you need to have Node.js, bun (can also be npm), and a PostgreSQL database installed on your machine. Then, follow these steps:
+
+1. Clone this repository and navigate to the project folder.
+2. Install the dependencies with `bun install`.
+3. Create a `.env` file in the root directory and add the following environment variables:
 ```
+DATABASE_URL="postgresql://USER:PASSWORD@HOST:PORT/DATABASE"
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+GOOGLE_CLIENT_ID=""
+GOOGLE_CLIENT_SECRET=""
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+NEXT_AUTH_SECRET="secrethere"
+```
+4. Run `bunx prisma migrate dev` to apply the database migrations and create the tables.
+5. Run `bunx prisma db seed` to populate the database with some sample data.
+6. Run `bun run dev` to start the development server.
+7. Open `http://localhost:3000` in your browser and enjoy the app. 😊
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## How to contribute 🤝
 
-## Learn More
+This project is open for contributions. If you want to add a feature, fix a bug, or improve the code quality, feel free to submit a pull request. You can also open an issue if you find any problems or have any suggestions. 🙏
 
-To learn more about Next.js, take a look at the following resources:
+## License 📄
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+This project is licensed under the MIT License.
